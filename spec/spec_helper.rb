@@ -1,0 +1,10 @@
+require 'rspec'
+
+require './lib/cook_book'
+require './lib/ingredient'
+require './lib/pantry'
+require './lib/recipe'
+require './cook_book_spec'
+require './ingredient_spec'
+require './pantry'
+require './recipe'
