@@ -17,11 +17,12 @@ class Recipe
 
   def ingredients
     ingredients_arr = []
+    # require "pry"; binding.pry
+
     @ingredients_required.each do |key, value|
       ingredients_arr.to_a << @ingredients_required.keys
+
     end
       ingredients_arr.flatten.uniq
   end
-
-
 end

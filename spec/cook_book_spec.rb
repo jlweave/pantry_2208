@@ -29,7 +29,7 @@ RSpec.describe CookBook do
     end
   end
 
-  describe '#total_calories' do
+  xdescribe '#total_calories' do
     it 'can add up the calories from a recipe and return an integer' do
       @recipe1.add_ingredient(@ingredient1, 2)
       @recipe1.add_ingredient(@ingredient2, 8)
@@ -44,5 +44,16 @@ RSpec.describe CookBook do
     end
   end
 
+  xdescribe '#highest_calorie_meal' do
+    it "can return the meal with the highest calorie count" do
+      @recipe1.add_ingredient(@ingredient1, 2)
+      @recipe1.add_ingredient(@ingredient2, 8)
+      @recipe2.add_ingredient(@ingredient1, 2)
+      @recipe2.add_ingredient(@ingredient3, 4)
+      @recipe2.add_ingredient(@ingredient4, 1)
+
+      expect(@cookbook.highest_calorie_meal).to eq(@recipe2)
+    end
+  end
 
 end

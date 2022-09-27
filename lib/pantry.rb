@@ -13,8 +13,14 @@ class Pantry
   def restock(item, quantity)
     @stock[item] += quantity
   end
-
-  def ingredients
-
+#does not work  ingredients_required not found?
+  def enough_ingredients_for?(recipes)
+    items = []
+    @stock.keys.each do |key|
+      items << key
+    end
+      items.sort == recipes.ingredients_required.keys
   end
+
+
 end

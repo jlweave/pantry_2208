@@ -7,10 +7,8 @@ class CookBook
 
   def add_recipe(recipe)
     @recipes << recipe
-    # require "pry"; binding.pry
-
   end
-
+#does not work
   def total_calories
     total_cal = []
     # require "pry"; binding.pry
@@ -22,4 +20,11 @@ class CookBook
         total_cal.to_i
     end
   end
+#does not work
+  def highest_calorie_meal
+    result = @recipes.max by |calories|
+      calories.ingredients.size
+  end
+
+
 end
