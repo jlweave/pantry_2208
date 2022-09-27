@@ -17,9 +17,9 @@ class CookBook
     #recipe1 and 2 has calories as a key, is there a holder already for them?
     @recipes.each do |name|
       name.ingredient do |key, value|
-        total_cal << value.to_i
+        total_cal << value
       end
-        total_cal
+        total_cal.to_i
     end
   end
 end

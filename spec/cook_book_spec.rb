@@ -36,7 +36,7 @@ RSpec.describe CookBook do
       @recipe2.add_ingredient(@ingredient1, 2)
       @recipe2.add_ingredient(@ingredient3, 4)
       @recipe2.add_ingredient(@ingredient4, 1)
-  require "pry"; binding.pry
+  # require "pry"; binding.pry
       expect(@recipe1.total_calories).to eq(440)
       expect(@recipe2.total_calories).to eq(675)
       @cookbook.add_recipe(@recipe1)
